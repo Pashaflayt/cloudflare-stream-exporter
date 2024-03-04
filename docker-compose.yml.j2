@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+    cloudflare-exporter:
+        container_name: cloudflare-stream-exporter
+        restart: always
+        ports:
+            - {{cloudflare_stream_port}}:8099
+        environment:
+          - API_KEY={{cloudflare_stream_api_key}}
+          - API_URL={{cloudflare_stream_url}}
+        image: cr.yandex/*******/cloudflare-stream-exporter:latest //Your url image repository
+        logging:
+          driver: "json-file"
+          options:
+            max-file: "5"
+            max-size: "10m"

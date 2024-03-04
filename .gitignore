@@ -1,0 +1,11 @@
+/roles/galaxy.*
+/roles/git.*
+/vault.key
+/ansible.cfg
+/roles/grafana/files/
+*.csv
+.DS_Store
+.AppleDouble
+.LSOverride
+*.test
+*.backup
